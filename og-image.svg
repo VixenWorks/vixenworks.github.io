@@ -14,11 +14,7 @@
   <g font-family="Inter, -apple-system, Segoe UI, sans-serif" fill="#eef0f8">
     <text x="80" y="180" font-size="28" font-weight="600" letter-spacing="6" fill="#a89eff">FRACTIONAL CTO &#8226; PERTH, WA &#8226; REMOTE-FIRST</text>
     <text x="80" y="320" font-size="92" font-weight="800">Technical Leadership.</text>
-    <text x="80" y="420" font-size="92" font-weight="800" font-style="italic" fill="#7c6dfa">Without burning your runway.</text>
+    <text x="80" y="420" font-size="76" font-weight="800" font-style="italic" fill="#7c6dfa">Without burning your runway.</text>
     <text x="80" y="540" font-size="36" font-weight="500" fill="#7e859e">vixenworks.com &#8226; Pay on retainer &#8226; No equity, ever</text>
-  </g>
-  <g transform="translate(960,80)">
-    <rect width="160" height="160" rx="32" fill="#12151f" stroke="rgba(124,109,250,0.45)" stroke-width="2"/>
-    <path d="M40 50 L80 130 L120 50" fill="none" stroke="#7c6dfa" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
