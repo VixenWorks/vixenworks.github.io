@@ -1,0 +1,7 @@
+# Vixenworks — https://vixenworks.com
+# All search engines and well-behaved AI crawlers welcome.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://vixenworks.com/sitemap.xml
