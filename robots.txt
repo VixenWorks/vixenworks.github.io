@@ -1,4 +1,4 @@
-# Vixenworks — https://vixenworks.com
+# VixenWorks https://vixenworks.com
 # All search engines and well-behaved AI crawlers welcome.
 
 User-agent: *
