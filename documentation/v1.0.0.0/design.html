@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152060479"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18152060479');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Design · VixenWorks Documentation</title>
+  <meta name="description" content="Learn how to use the Design stage on VixenWorks. Generate project plans, architecture documents, verbose implementation tasks, and manage per-project API keys.">
+  <meta name="author" content="VixenWorks">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0d14">
+  <link rel="canonical" href="https://vixenworks.com/documentation/v1.0.0.0/design.html">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VixenWorks">
+  <meta property="og:title" content="Design · VixenWorks Documentation">
+  <meta property="og:description" content="Generate a complete technical plan, architecture, and implementation backlog from your product definition.">
+  <meta property="og:url" content="https://vixenworks.com/documentation/v1.0.0.0/design.html">
+  <meta property="og:image" content="https://vixenworks.com/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="documentation.css">
+
+  <!-- Brevo Conversations {literal} -->
+  <script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '69ffb64e75be1520ad0b9065';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>VX</span> VixenWorks</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/features.html">Features</a></li>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/use-cases.html">Use Cases</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="https://platform.vixenworks.com/register" class="nav-cta">Start Building &rarr;</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DOCUMENTATION LAYOUT -->
+  <div class="doc-layout">
+
+    <!-- DOC NAV -->
+    <nav class="doc-nav" aria-label="Documentation navigation">
+      <div class="doc-nav-group">
+        <a href="/documentation/v1.0.0.0/index.html">Introduction</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Getting Started</span>
+        <a href="/documentation/v1.0.0.0/getting-started.html">Getting Started</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Core Workflows</span>
+        <a href="/documentation/v1.0.0.0/discover.html">Discover</a>
+        <a href="/documentation/v1.0.0.0/define.html">Define</a>
+        <a href="/documentation/v1.0.0.0/design.html" class="active">Design</a>
+        <a href="/documentation/v1.0.0.0/build.html">Build</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Platform Features</span>
+        <a href="/documentation/v1.0.0.0/workspaces.html">Workspaces</a>
+        <a href="/documentation/v1.0.0.0/insights.html">Insights</a>
+        <a href="/documentation/v1.0.0.0/costs.html">Costs</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Administration</span>
+        <a href="/documentation/v1.0.0.0/admin/index.html">Overview</a>
+        <a href="/documentation/v1.0.0.0/admin/settings.html">Settings</a>
+        <a href="/documentation/v1.0.0.0/admin/billing.html">Billing</a>
+        <a href="/documentation/v1.0.0.0/admin/audit-log.html">Audit Log</a>
+        <a href="/documentation/v1.0.0.0/admin/members.html">Members</a>
+      </div>
+    </nav>
+
+    <!-- DOC CONTENT -->
+    <main class="doc-content">
+      <nav class="doc-breadcrumb" aria-label="Breadcrumb">
+        <a href="/documentation/v1.0.0.0/index.html">Documentation</a>
+        <span class="doc-breadcrumb-sep">/</span>
+        <span>Design</span>
+      </nav>
+
+      <h1>Design</h1>
+      <p class="doc-lead">Design is the third stage of the platform workflow. It takes your completed product definition from Define and produces a complete technical solution: a project plan, stakeholder brief, client proposal, architecture document, and a granular dependency-ordered implementation backlog.</p>
+
+      <hr>
+
+      <h2>What it is</h2>
+      <p>Every artefact is generated with your product definition as context, which prevents the technical solution from drifting away from the problem you set out to solve.</p>
+
+      <hr>
+
+      <h2>Who can use it</h2>
+      <p>Available to all authenticated users with an active subscription (both ORG Admins and ORG Members).</p>
+      <p>Navigate to <strong>Design</strong> in the sidebar or go directly to <code>/project</code>.</p>
+
+      <hr>
+
+      <h2>How it works</h2>
+
+      <h3>Project Runs</h3>
+      <p>Every design is stored as a <strong>Project Run</strong>. A Project Run is linked to a Workflow Run (your product definition) and contains all artefacts generated through the Design layers. You can create multiple Project Runs, for example, to explore different technical approaches to the same product definition.</p>
+      <p>From the Design page you can:</p>
+      <ul>
+        <li>Create a new Project Run, linking it to an existing Workflow Run</li>
+        <li>View and navigate all existing runs</li>
+        <li>Access individual artefacts (plan, backlog, architecture, Layer 7 consultation)</li>
+      </ul>
+
+      <h3>Layer 3: Project Plan</h3>
+      <p>Layer 3 generates the high-level project plan. It produces:</p>
+      <ul>
+        <li>A set of <strong>epics</strong> representing the major deliverable areas of the product</li>
+        <li><strong>Phases</strong> grouping epics into a logical delivery sequence</li>
+        <li>Integration epic rules are enforced automatically to ensure cross-cutting concerns (authentication, APIs, data layers) are properly planned</li>
+      </ul>
+      <p>The plan is stored as a structured JSON artefact on the Project Run. It is the spine that all subsequent layers build upon.</p>
+
+      <h3>Layer 4: Project Brief</h3>
+      <p>Layer 4 generates a <strong>stakeholder-facing project brief</strong> from the plan. The brief is written in plain language suitable for presentation to non-technical stakeholders, product owners, or clients. It communicates what will be built, why, in what phases, and what the expected outcomes are.</p>
+
+      <h3>Layer 5: Client Proposal</h3>
+      <p>Layer 5 generates a <strong>client-facing proposal document</strong> from the brief and plan. This is a more formal document suitable for commercial contexts, presenting scope, approach, phases, and expected deliverables in a structured format.</p>
+
+      <h3>Architecture Document</h3>
+      <p>The architecture generation is a separate step from the layered plan generation. It produces:</p>
+      <ul>
+        <li>An <strong>architecture document</strong> describing the overall technical approach, key decisions, and system design</li>
+        <li><strong>Architecture Decision Records (ADRs)</strong> capturing why specific technology choices were made</li>
+      </ul>
+      <p>If your organisation has configured architecture defaults (preferred technologies, patterns, or constraints) in Settings, those are automatically injected into the architecture generation prompts. This ensures all projects start from a consistent architectural baseline.</p>
+      <p>The architecture document can be updated independently of the plan at any time. Use the <strong>Planner Chat</strong> panel or retrigger architecture generation after amending the plan.</p>
+
+      <h3>Layer 6: Verbose Implementation Tasks</h3>
+      <p>Layer 6 expands the project plan into <strong>granular, dependency-ordered implementation tasks</strong>. These are the tasks that will eventually be sent to the coding agent in the Build stage.</p>
+      <p>Each task:</p>
+      <ul>
+        <li>Carries full context about what it needs to do (not just a title)</li>
+        <li>Has explicit dependencies on other tasks</li>
+        <li>Is grouped into <strong>execution batches</strong> based on its dependency graph. Tasks in the same batch can be run in parallel; batches must be run in order</li>
+      </ul>
+      <p>Layer 6 output is what populates the Kanban board in Build. The quality and completeness of the verbose tasks directly determines how well the coding agent performs.</p>
+
+      <h3>Layer 7: Consultation and Prioritisation</h3>
+      <p>Layer 7 generates a set of <strong>consultation questions</strong>. These are things the platform has identified as unknowns, risks, or decisions that should be resolved before coding begins. Examples include:</p>
+      <ul>
+        <li>Unresolved technical choices ("Should the API be REST or GraphQL?")</li>
+        <li>Missing acceptance criteria for specific features</li>
+        <li>Integration assumptions that need confirmation</li>
+      </ul>
+      <p>Layer 7 also provides an interface to:</p>
+      <ul>
+        <li>Edit the architecture document inline</li>
+        <li>Adjust task priorities before the backlog is sent to Build</li>
+      </ul>
+      <p>Work through the consultation questions before enqueuing tasks. Each answered question reduces the risk of the coding agent making a wrong assumption.</p>
+
+      <h3>Planner Chat (Artefact Amendment)</h3>
+      <p>The <strong>Planner Chat</strong> panel is available throughout Design. It is aware of the current Project Run and all its artefacts.</p>
+      <p>Use it to:</p>
+      <ul>
+        <li>Ask questions about any artefact: "What dependencies does the authentication epic have?"</li>
+        <li>Request amendments: "Add a caching layer to the architecture document."</li>
+        <li>Regenerate affected artefacts: "The data model has changed, update the verbose tasks for the user management epic."</li>
+      </ul>
+      <p>Changes are applied as diffs to the stored JSON artefacts and persisted to the Project Run.</p>
+
+      <h3>Per-Project API Key Overrides</h3>
+      <p>By default, the platform uses the organisation-level API keys configured in Settings. You can override the LLM provider keys on a per-project basis from within the Design interface.</p>
+      <p>This is useful when:</p>
+      <ul>
+        <li>A specific project should be charged to a different LLM account</li>
+        <li>You want to test a project with a different provider or model configuration</li>
+        <li>A client has provided their own API keys for a project</li>
+      </ul>
+      <p>Project-level overrides take priority over organisation-level keys, which take priority over the platform environment defaults.</p>
+
+      <h3>Adversarial Review</h3>
+      <p>As in Define, any artefact in Design can be submitted to adversarial review. Critiques are contextualised to the artefact type. An adversarial review of a project plan will challenge scope, phasing, and assumptions. A review of an architecture document will challenge technical decisions and risks.</p>
+
+      <hr>
+
+      <h2>How to use it to solve your problem</h2>
+
+      <h3>Running a complete Design workflow</h3>
+      <ol>
+        <li>Navigate to <strong>Design</strong> in the sidebar.</li>
+        <li>Click <strong>New Run</strong> and link it to the completed Workflow Run (product definition) from Define.</li>
+        <li>Trigger <strong>Layer 3</strong> to generate the project plan. Review the epics and phases.</li>
+        <li>If anything is missing or structured incorrectly, open <strong>Planner Chat</strong> and describe the changes needed.</li>
+        <li>Trigger <strong>Layer 4</strong> to generate the project brief. Review it for accuracy and completeness.</li>
+        <li>Trigger <strong>Layer 5</strong> to generate the client proposal if you need a commercial-facing document.</li>
+        <li>Trigger <strong>Architecture</strong> generation. Review the architecture decisions and ensure they match your technical constraints. Amend via Planner Chat if needed.</li>
+        <li>Trigger <strong>Layer 6</strong> to expand the plan into verbose implementation tasks. This step may take several minutes for large projects.</li>
+        <li>Review the verbose tasks. Check that each task has sufficient context and that the dependency ordering makes sense.</li>
+        <li>Trigger <strong>Layer 7</strong> to generate consultation questions. Work through each question and either answer it or update the relevant artefact to reflect the decision.</li>
+        <li>Adjust task priorities as needed from the Layer 7 interface.</li>
+        <li>When you are satisfied, move to <a href="/documentation/v1.0.0.0/build.html">Build</a> to enqueue tasks to the coding agent.</li>
+      </ol>
+
+      <h3>Amending the design after Build has started</h3>
+      <p>If requirements change mid-build:</p>
+      <ol>
+        <li>Return to <strong>Design</strong> and open the relevant Project Run.</li>
+        <li>Use <strong>Planner Chat</strong> to amend the affected artefacts.</li>
+        <li>If new verbose tasks are needed, regenerate the affected epics or stories.</li>
+        <li>Return to <strong>Build</strong> to enqueue the new tasks.</li>
+      </ol>
+
+      <hr>
+
+      <h2>How it fits the broader picture</h2>
+      <p>Design sits between Define and Build. It translates the product definition into an executable technical plan. The formal link between the Workflow Run (product definition) and the Project Run ensures the Design output is always traceable back to the problem statement.</p>
+      <p>The verbose tasks produced in Layer 6 are the direct input to the Build stage. The better the Design output, the more autonomously and accurately the coding agent can work.</p>
+      <p>When your verbose tasks are complete, prioritised, and the consultation questions are resolved, move to <a href="/documentation/v1.0.0.0/build.html">Build</a>.</p>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="footer-logo"><span>VX</span> VixenWorks</a>
+        <p class="footer-copy">&copy; 2025 VixenWorks. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/features.html">Features</a>
+          <a href="/platform.html">Platform</a>
+          <a href="/use-cases.html">Use Cases</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="https://platform.vixenworks.com/register">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+</body>
+</html>

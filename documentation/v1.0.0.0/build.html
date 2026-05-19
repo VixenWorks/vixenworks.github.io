@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152060479"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18152060479');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Build · VixenWorks Documentation</title>
+  <meta name="description" content="Learn how to use the Build stage on VixenWorks. Kanban board, Layer 8 agent queue, batch approval, Stock and Tengu worker modes, and task management.">
+  <meta name="author" content="VixenWorks">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0d14">
+  <link rel="canonical" href="https://vixenworks.com/documentation/v1.0.0.0/build.html">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VixenWorks">
+  <meta property="og:title" content="Build · VixenWorks Documentation">
+  <meta property="og:description" content="Execute your implementation backlog with the autonomous coding agent. Manage task batches, monitor progress, and handle failures.">
+  <meta property="og:url" content="https://vixenworks.com/documentation/v1.0.0.0/build.html">
+  <meta property="og:image" content="https://vixenworks.com/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="documentation.css">
+
+  <!-- Brevo Conversations {literal} -->
+  <script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '69ffb64e75be1520ad0b9065';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>VX</span> VixenWorks</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/features.html">Features</a></li>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/use-cases.html">Use Cases</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="https://platform.vixenworks.com/register" class="nav-cta">Start Building &rarr;</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DOCUMENTATION LAYOUT -->
+  <div class="doc-layout">
+
+    <!-- DOC NAV -->
+    <nav class="doc-nav" aria-label="Documentation navigation">
+      <div class="doc-nav-group">
+        <a href="/documentation/v1.0.0.0/index.html">Introduction</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Getting Started</span>
+        <a href="/documentation/v1.0.0.0/getting-started.html">Getting Started</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Core Workflows</span>
+        <a href="/documentation/v1.0.0.0/discover.html">Discover</a>
+        <a href="/documentation/v1.0.0.0/define.html">Define</a>
+        <a href="/documentation/v1.0.0.0/design.html">Design</a>
+        <a href="/documentation/v1.0.0.0/build.html" class="active">Build</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Platform Features</span>
+        <a href="/documentation/v1.0.0.0/workspaces.html">Workspaces</a>
+        <a href="/documentation/v1.0.0.0/insights.html">Insights</a>
+        <a href="/documentation/v1.0.0.0/costs.html">Costs</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Administration</span>
+        <a href="/documentation/v1.0.0.0/admin/index.html">Overview</a>
+        <a href="/documentation/v1.0.0.0/admin/settings.html">Settings</a>
+        <a href="/documentation/v1.0.0.0/admin/billing.html">Billing</a>
+        <a href="/documentation/v1.0.0.0/admin/audit-log.html">Audit Log</a>
+        <a href="/documentation/v1.0.0.0/admin/members.html">Members</a>
+      </div>
+    </nav>
+
+    <!-- DOC CONTENT -->
+    <main class="doc-content">
+      <nav class="doc-breadcrumb" aria-label="Breadcrumb">
+        <a href="/documentation/v1.0.0.0/index.html">Documentation</a>
+        <span class="doc-breadcrumb-sep">/</span>
+        <span>Build</span>
+      </nav>
+
+      <h1>Build</h1>
+      <p class="doc-lead">Build is the fourth and final stage of the platform workflow. It takes the verbose implementation tasks produced in Design and executes them autonomously using a background coding agent. You manage the work through a Kanban board, approve task batches before they run, and monitor real-time progress as the agent writes code in your connected git repository.</p>
+
+      <hr>
+
+      <h2>Who can use it</h2>
+      <p>Available to all authenticated users with an active subscription (both ORG Admins and ORG Members).</p>
+      <p>Navigate to <strong>Build</strong> in the sidebar or go directly to <code>/board</code>.</p>
+
+      <hr>
+
+      <h2>How it works</h2>
+
+      <h3>Board Selector</h3>
+      <p>The Build section opens on a <strong>board selector page</strong> that lists all your Project Runs. Each Project Run has its own Kanban board. Select the project you want to work on to open its board.</p>
+
+      <h3>Kanban Board</h3>
+      <p>The Kanban board provides a visual overview of all tasks for a project. Each task card shows:</p>
+      <ul>
+        <li>Task title and description</li>
+        <li>Current status</li>
+        <li>Priority level</li>
+      </ul>
+      <p>Tasks are managed in columns representing their status. Status and priority can be edited inline on each card. The board state synchronises bidirectionally with the API. Changes made to tasks by the coding agent are reflected on the board in real time.</p>
+
+      <h3>The Task Queue (Layer 8)</h3>
+      <p>Before the coding agent can work, the verbose tasks from the Design stage must be <strong>enqueued</strong> into the agent task queue. This is Layer 8 of the platform pipeline.</p>
+      <p>When you enqueue tasks from a Project Run:</p>
+      <ol>
+        <li>The verbose tasks are converted into <strong>Agent Task</strong> records in the database.</li>
+        <li>Tasks are grouped into <strong>dependency-ordered batches</strong> based on the dependency graph computed in Design. Tasks within a batch can run in parallel; batches must complete in sequence.</li>
+        <li>An <strong>integration verification task</strong> is automatically appended to every batch. This task runs after each batch completes to verify that the newly added code integrates correctly with the existing codebase.</li>
+      </ol>
+      <p>The batching ensures that the coding agent always works on a valid, buildable state of the codebase. It never starts a task that depends on incomplete work.</p>
+
+      <h3>Batch Approval Workflow</h3>
+      <p>Enqueued task batches do not run automatically. Each batch must be <strong>explicitly approved</strong> before the worker picks it up.</p>
+      <p>This is a deliberate design choice. It gives you the opportunity to:</p>
+      <ul>
+        <li>Review what the agent is about to work on before it touches your codebase</li>
+        <li>Hold a batch if requirements have changed</li>
+        <li>Stagger execution if you want to review code changes between batches</li>
+      </ul>
+      <p>To approve a batch:</p>
+      <ol>
+        <li>Open the board for the relevant project.</li>
+        <li>Review the tasks in the next pending batch.</li>
+        <li>Click <strong>Approve</strong> to release the batch to the worker.</li>
+      </ol>
+      <p>The worker will pick up approved batches and begin executing tasks.</p>
+
+      <h3>Worker Execution</h3>
+      <p>A persistent background <strong>Layer 8 Worker</strong> runs alongside the platform. It polls the database for approved tasks and executes them against your connected git repository.</p>
+      <p>The worker respects batch ordering. It will not start a new batch until the previous batch (including the integration verification task) is complete or has failed.</p>
+      <p>As tasks execute, the board updates in real time:</p>
+      <ul>
+        <li>Task status changes to <code>IN_PROGRESS</code> when the worker picks it up</li>
+        <li>Task status changes to <code>COMPLETE</code> or <code>FAILED</code> when the worker finishes</li>
+        <li>Failed tasks can be restarted from the board</li>
+      </ul>
+
+      <h3>Stock Worker Mode</h3>
+      <p>The default worker mode uses an <strong>Anthropic-backed agent loop</strong>. It is equipped with filesystem and git tools that allow it to:</p>
+      <ul>
+        <li>Read and write files in the repository</li>
+        <li>Run shell commands to build, test, and lint the code</li>
+        <li>Make git commits</li>
+      </ul>
+      <p>The agent operates in an isolated execution environment against a mounted repository path. An optional <strong>read-only mode</strong> (<code>AGENT_READ_MODE</code>) can be enabled to allow the agent to inspect the codebase without making any changes, useful for analysis or review tasks.</p>
+
+      <h3>Tengu Worker Mode</h3>
+      <p>When <code>WORKER_TYPE=tengu</code> is configured by your platform operator, the worker uses the embedded <strong>Tengu agent runtime</strong>. Tengu provides a richer tool suite including:</p>
+      <ul>
+        <li>Subagents (explore, plan, verify, general purpose)</li>
+        <li>MCP (Model Context Protocol) integration for external tool servers</li>
+        <li>Tmux and iTerm2 backends for terminal multiplexing</li>
+        <li>Full filesystem, bash, and git tooling</li>
+      </ul>
+      <p>Tengu mode is appropriate for complex projects that require the agent to spawn specialised sub-tasks, use external tools, or work in a more interactive terminal environment.</p>
+      <p>Contact your platform operator to find out which worker mode is configured for your installation.</p>
+
+      <h3>Task Restart</h3>
+      <p>If a task fails, it is marked as <code>FAILED</code> on the board. You can:</p>
+      <ol>
+        <li>Click <strong>Restart</strong> on the failed task to re-queue it.</li>
+        <li>Review the task detail to understand what the agent attempted and why it failed.</li>
+        <li>If the failure was caused by a gap in the task specification, return to <strong>Design</strong>, amend the verbose task via Planner Chat, and then restart.</li>
+      </ol>
+
+      <h3>Planner Chat on the Board</h3>
+      <p>The <strong>Planner Chat</strong> panel is available on the Build board as well as in Define and Design. On the board, it operates against the backlog artefacts of the Project Run.</p>
+      <p>Use it to:</p>
+      <ul>
+        <li>Amend task descriptions before approving a batch: "Rewrite the authentication task to use sessions instead of JWT."</li>
+        <li>Add missing tasks: "Add a task to configure the email verification flow."</li>
+        <li>Ask questions about the current backlog: "Which tasks in batch 3 depend on the database migration completing?"</li>
+      </ul>
+
+      <hr>
+
+      <h2>How to use it to solve your problem</h2>
+
+      <h3>Running your first build</h3>
+      <ol>
+        <li>Navigate to <strong>Build</strong> in the sidebar and select the project you want to build.</li>
+        <li>Click <strong>Enqueue tasks</strong> to convert the Design verbose tasks into the agent task queue. You will see the tasks appear on the board grouped into batches.</li>
+        <li>Review the first batch of tasks. Check that the descriptions are complete and accurate.</li>
+        <li>Click <strong>Approve</strong> to release the first batch to the worker.</li>
+        <li>Watch the board as tasks move to <code>IN_PROGRESS</code> and then <code>COMPLETE</code>.</li>
+        <li>When the first batch finishes (including the integration verification), review the second batch and approve it.</li>
+        <li>Continue approving batches until all tasks are complete.</li>
+      </ol>
+
+      <h3>Handling a failed task</h3>
+      <ol>
+        <li>Identify the failed task on the board (shown in the <code>FAILED</code> column or with a failure indicator).</li>
+        <li>Open the task detail to read the agent's execution log.</li>
+        <li>If it is a transient failure (network, timeout): click <strong>Restart</strong>.</li>
+        <li>If it is a specification issue: go to <strong>Design</strong>, amend the verbose task via Planner Chat, return to <strong>Build</strong>, and restart.</li>
+      </ol>
+
+      <h3>Making mid-build amendments</h3>
+      <p>If requirements change after you have started building:</p>
+      <ol>
+        <li>Open <strong>Planner Chat</strong> on the board.</li>
+        <li>Describe the change needed: "The search feature should use full-text search rather than prefix matching."</li>
+        <li>The chat will amend the affected task descriptions.</li>
+        <li>If tasks have already been completed and need to be reworked, add new tasks via Planner Chat to undo or update the affected code.</li>
+      </ol>
+
+      <hr>
+
+      <h2>How it fits the broader picture</h2>
+      <p>Build is where the platform produces a tangible output in your codebase. Everything from Discover through to Design has been building toward this stage. The problem is framed, the requirements are defined, the solution is designed, and the tasks are precisely specified. The coding agent can work confidently because it has full context for every task.</p>
+      <p>The Insights page tracks delivery progress across all your Build projects, so you can monitor throughput, identify blocked tasks, and understand agent performance over time. See <a href="/documentation/v1.0.0.0/insights.html">Insights</a>.</p>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="footer-logo"><span>VX</span> VixenWorks</a>
+        <p class="footer-copy">&copy; 2025 VixenWorks. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/features.html">Features</a>
+          <a href="/platform.html">Platform</a>
+          <a href="/use-cases.html">Use Cases</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="https://platform.vixenworks.com/register">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+</body>
+</html>

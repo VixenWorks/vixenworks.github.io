@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152060479"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18152060479');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Workspaces · VixenWorks Documentation</title>
+  <meta name="description" content="Learn how to use Workspaces on VixenWorks. Organise products, projects, and team members by team or client with workspace roles and access control.">
+  <meta name="author" content="VixenWorks">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0d14">
+  <link rel="canonical" href="https://vixenworks.com/documentation/v1.0.0.0/workspaces.html">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VixenWorks">
+  <meta property="og:title" content="Workspaces · VixenWorks Documentation">
+  <meta property="og:description" content="Organise your products, projects, and team members using Workspaces on VixenWorks.">
+  <meta property="og:url" content="https://vixenworks.com/documentation/v1.0.0.0/workspaces.html">
+  <meta property="og:image" content="https://vixenworks.com/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="documentation.css">
+
+  <!-- Brevo Conversations {literal} -->
+  <script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '69ffb64e75be1520ad0b9065';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>VX</span> VixenWorks</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/features.html">Features</a></li>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/use-cases.html">Use Cases</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="https://platform.vixenworks.com/register" class="nav-cta">Start Building &rarr;</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DOCUMENTATION LAYOUT -->
+  <div class="doc-layout">
+
+    <!-- DOC NAV -->
+    <nav class="doc-nav" aria-label="Documentation navigation">
+      <div class="doc-nav-group">
+        <a href="/documentation/v1.0.0.0/index.html">Introduction</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Getting Started</span>
+        <a href="/documentation/v1.0.0.0/getting-started.html">Getting Started</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Core Workflows</span>
+        <a href="/documentation/v1.0.0.0/discover.html">Discover</a>
+        <a href="/documentation/v1.0.0.0/define.html">Define</a>
+        <a href="/documentation/v1.0.0.0/design.html">Design</a>
+        <a href="/documentation/v1.0.0.0/build.html">Build</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Platform Features</span>
+        <a href="/documentation/v1.0.0.0/workspaces.html" class="active">Workspaces</a>
+        <a href="/documentation/v1.0.0.0/insights.html">Insights</a>
+        <a href="/documentation/v1.0.0.0/costs.html">Costs</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Administration</span>
+        <a href="/documentation/v1.0.0.0/admin/index.html">Overview</a>
+        <a href="/documentation/v1.0.0.0/admin/settings.html">Settings</a>
+        <a href="/documentation/v1.0.0.0/admin/billing.html">Billing</a>
+        <a href="/documentation/v1.0.0.0/admin/audit-log.html">Audit Log</a>
+        <a href="/documentation/v1.0.0.0/admin/members.html">Members</a>
+      </div>
+    </nav>
+
+    <!-- DOC CONTENT -->
+    <main class="doc-content">
+      <nav class="doc-breadcrumb" aria-label="Breadcrumb">
+        <a href="/documentation/v1.0.0.0/index.html">Documentation</a>
+        <span class="doc-breadcrumb-sep">/</span>
+        <span>Workspaces</span>
+      </nav>
+
+      <h1>Workspaces</h1>
+      <p class="doc-lead">Workspaces are containers within your organisation that group related products, projects, and team members together. They provide a way to organise work by team, client, product line, or any other grouping that makes sense for your organisation.</p>
+
+      <hr>
+
+      <h2>What it is</h2>
+      <p>A workspace does not change how the Discover to Build workflow operates. It is an organisational layer on top of that workflow, giving you visibility and access control over who can see and work on what.</p>
+
+      <hr>
+
+      <h2>Who can use it</h2>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Capability</th>
+              <th>ORG Member</th>
+              <th>ORG Admin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>View workspaces</td>
+              <td>Only workspaces where they have membership</td>
+              <td>All workspaces in the organisation</td>
+            </tr>
+            <tr>
+              <td>Create a workspace</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Delete a workspace</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Manage workspace members</td>
+              <td>Workspace Admins only</td>
+              <td>All workspaces</td>
+            </tr>
+            <tr>
+              <td>Assign products/projects</td>
+              <td>Workspace Collaborators and above</td>
+              <td>All workspaces</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Navigate to <strong>Workspaces</strong> in the sidebar or go directly to <code>/workspaces</code>.</p>
+
+      <hr>
+
+      <h2>How it works</h2>
+
+      <h3>Creating a Workspace</h3>
+      <p>Only ORG Admins can create workspaces.</p>
+      <ol>
+        <li>Navigate to <strong>Workspaces</strong> in the sidebar.</li>
+        <li>Click <strong>New Workspace</strong>.</li>
+        <li>Enter a name and an optional description.</li>
+        <li>Submit. You are automatically assigned as a <strong>Workspace Admin</strong> of the new workspace.</li>
+      </ol>
+
+      <h3>Viewing Workspaces</h3>
+      <ul>
+        <li><strong>ORG Admins</strong> see all workspaces in the organisation on the Workspaces list page.</li>
+        <li><strong>ORG Members</strong> see only workspaces where they have an explicit membership row.</li>
+      </ul>
+      <p>Click any workspace card to open the workspace detail page.</p>
+
+      <h3>Workspace Detail Page</h3>
+      <p>The workspace detail page has three tabs:</p>
+      <ul>
+        <li><strong>Products</strong> &mdash; lists all Workflow Runs (Define stage output) assigned to this workspace. Each entry links to the full Define workflow run.</li>
+        <li><strong>Projects</strong> &mdash; lists all Project Runs (Design stage output) assigned to this workspace. Each entry links to the full Design project run.</li>
+        <li><strong>Members</strong> &mdash; lists all members of this workspace and their roles. Workspace Admins and ORG Admins can add, change, and remove members from this tab.</li>
+      </ul>
+
+      <h3>Workspace Roles</h3>
+      <p>Every member of a workspace is assigned one of three roles:</p>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>What they can do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Workspace Admin</strong></td>
+              <td>Manage members (add, change role, remove). Assign products and projects to the workspace. Edit workspace name and description.</td>
+            </tr>
+            <tr>
+              <td><strong>Workspace Collaborator</strong></td>
+              <td>Assign products and projects to the workspace. Contribute to work within the workspace.</td>
+            </tr>
+            <tr>
+              <td><strong>Workspace Viewer</strong></td>
+              <td>Read-only access to workspace contents. Can see assigned products, projects, and members but cannot make changes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>ORG Admins</strong> have implicit <strong>Workspace Admin</strong> access to every workspace in the organisation. They do not need to be added as a member.</p>
+
+      <h3>Adding Members to a Workspace</h3>
+      <p>Adding a member to a workspace gives them access to see that workspace and its contents. Only existing <strong>organisation users</strong> can be added to workspaces. Workspaces do not create new platform accounts.</p>
+      <p>To add a member:</p>
+      <ol>
+        <li>Open the workspace detail page and go to the <strong>Members</strong> tab.</li>
+        <li>Click <strong>Add Member</strong>.</li>
+        <li>Search for an existing organisation user by name or email.</li>
+        <li>Select the user and assign their workspace role.</li>
+        <li>Confirm. The user will now see this workspace in their Workspaces list.</li>
+      </ol>
+      <p>To change a member's role or remove them, use the options on their row in the Members tab.</p>
+
+      <h3>Assigning Products and Projects</h3>
+      <p>Assigning a product (Workflow Run) or project (Project Run) to a workspace links that work to the workspace context.</p>
+      <p>From the workspace detail page:</p>
+      <ol>
+        <li>Go to the <strong>Products</strong> or <strong>Projects</strong> tab.</li>
+        <li>Click <strong>Assign</strong> and select from the available runs in the organisation.</li>
+        <li>The run now appears in the workspace and is visible to all workspace members (subject to their role).</li>
+      </ol>
+      <p>Runs can also be assigned to a workspace when they are created, depending on the platform configuration.</p>
+
+      <h3>Deleting a Workspace</h3>
+      <p>Only ORG Admins can delete workspaces.</p>
+      <ol>
+        <li>Open the workspace detail page.</li>
+        <li>Use the delete action (typically in the workspace settings or header menu).</li>
+        <li>Confirm the deletion.</li>
+      </ol>
+      <p>Deleting a workspace does not delete the products or projects assigned to it. Those remain in the organisation. Only the workspace container and its membership records are removed.</p>
+
+      <hr>
+
+      <h2>How to use it to solve your problem</h2>
+
+      <h3>Organising work by team</h3>
+      <p>Create one workspace per team. Add team members to their workspace with appropriate roles. Assign products and projects to the workspace as they are created. Team members only see work relevant to them and cannot access other teams' workspaces.</p>
+
+      <h3>Organising work by client</h3>
+      <p>Create one workspace per client. Assign the client's products and projects to their workspace. Workspace Viewers can be added for stakeholders who need visibility but should not be able to make changes.</p>
+
+      <h3>Giving a stakeholder read-only visibility</h3>
+      <p>Add the stakeholder as an org user (see <a href="/documentation/v1.0.0.0/admin/members.html">Members</a>) and then add them to the relevant workspace as a <strong>Workspace Viewer</strong>. They will be able to see assigned products, projects, and members but cannot modify anything.</p>
+
+      <hr>
+
+      <h2>How it fits the broader picture</h2>
+      <p>Workspaces are an organisational layer that sits across all four workflow stages. A typical setup:</p>
+      <ol>
+        <li>An ORG Admin creates a workspace for a product team or client.</li>
+        <li>Team members are added to the workspace.</li>
+        <li>As the team works through Discover to Build, the resulting Workflow Runs and Project Runs are assigned to the workspace.</li>
+        <li>The workspace becomes a single view of all work for that team or client.</li>
+      </ol>
+      <p>Workspace-scoped data also flows through to <strong>Costs</strong>. LLM spend can be filtered by workspace on the Costs page, giving you a cost view per team or project. See <a href="/documentation/v1.0.0.0/costs.html">Costs</a>.</p>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="footer-logo"><span>VX</span> VixenWorks</a>
+        <p class="footer-copy">&copy; 2025 VixenWorks. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/features.html">Features</a>
+          <a href="/platform.html">Platform</a>
+          <a href="/use-cases.html">Use Cases</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="https://platform.vixenworks.com/register">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+</body>
+</html>

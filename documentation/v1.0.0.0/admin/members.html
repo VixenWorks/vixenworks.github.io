@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152060479"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18152060479');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Members · VixenWorks Documentation</title>
+  <meta name="description" content="Manage organisation and workspace membership on VixenWorks. Add users, assign workspace roles, and control access across teams and clients.">
+  <meta name="author" content="VixenWorks">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0d14">
+  <link rel="canonical" href="https://vixenworks.com/documentation/v1.0.0.0/admin/members.html">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VixenWorks">
+  <meta property="og:title" content="Members · VixenWorks Documentation">
+  <meta property="og:description" content="Add users to your organisation, manage workspace membership, and control access with platform and workspace roles.">
+  <meta property="og:url" content="https://vixenworks.com/documentation/v1.0.0.0/admin/members.html">
+  <meta property="og:image" content="https://vixenworks.com/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="stylesheet" href="../documentation.css">
+
+  <!-- Brevo Conversations {literal} -->
+  <script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '69ffb64e75be1520ad0b9065';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>VX</span> VixenWorks</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/features.html">Features</a></li>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/use-cases.html">Use Cases</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="https://platform.vixenworks.com/register" class="nav-cta">Start Building &rarr;</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DOCUMENTATION LAYOUT -->
+  <div class="doc-layout">
+
+    <!-- DOC NAV -->
+    <nav class="doc-nav" aria-label="Documentation navigation">
+      <div class="doc-nav-group">
+        <a href="/documentation/v1.0.0.0/index.html">Introduction</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Getting Started</span>
+        <a href="/documentation/v1.0.0.0/getting-started.html">Getting Started</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Core Workflows</span>
+        <a href="/documentation/v1.0.0.0/discover.html">Discover</a>
+        <a href="/documentation/v1.0.0.0/define.html">Define</a>
+        <a href="/documentation/v1.0.0.0/design.html">Design</a>
+        <a href="/documentation/v1.0.0.0/build.html">Build</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Platform Features</span>
+        <a href="/documentation/v1.0.0.0/workspaces.html">Workspaces</a>
+        <a href="/documentation/v1.0.0.0/insights.html">Insights</a>
+        <a href="/documentation/v1.0.0.0/costs.html">Costs</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Administration</span>
+        <a href="/documentation/v1.0.0.0/admin/index.html">Overview</a>
+        <a href="/documentation/v1.0.0.0/admin/settings.html">Settings</a>
+        <a href="/documentation/v1.0.0.0/admin/billing.html">Billing</a>
+        <a href="/documentation/v1.0.0.0/admin/audit-log.html">Audit Log</a>
+        <a href="/documentation/v1.0.0.0/admin/members.html" class="active">Members</a>
+      </div>
+    </nav>
+
+    <!-- DOC CONTENT -->
+    <main class="doc-content">
+      <nav class="doc-breadcrumb" aria-label="Breadcrumb">
+        <a href="/documentation/v1.0.0.0/index.html">Documentation</a>
+        <span class="doc-breadcrumb-sep">/</span>
+        <a href="/documentation/v1.0.0.0/admin/index.html">Administration</a>
+        <span class="doc-breadcrumb-sep">/</span>
+        <span>Members</span>
+      </nav>
+
+      <h1>Members</h1>
+      <p class="doc-lead">Member management covers two distinct levels: organisation membership (who has a platform account in your organisation) and workspace membership (which of those organisation users can access a specific workspace and at what level).</p>
+
+      <hr>
+
+      <h2>Who can use it</h2>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Capability</th>
+              <th>ORG Member</th>
+              <th>ORG Admin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Add users to the organisation</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>View org members (search)</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Add/remove members from a workspace</td>
+              <td>Workspace Admins only</td>
+              <td>All workspaces</td>
+            </tr>
+            <tr>
+              <td>Change a workspace member's role</td>
+              <td>Workspace Admins only</td>
+              <td>All workspaces</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+
+      <h2>Organisation Membership</h2>
+
+      <h3>Platform Roles</h3>
+      <p>Every user in the organisation has one of two platform roles:</p>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ORG Admin</strong></td>
+              <td>Full access to all platform features including Settings, Billing, Audit Log, and workspace administration. The first ORG Admin is created during registration.</td>
+            </tr>
+            <tr>
+              <td><strong>ORG Member</strong></td>
+              <td>Access to the full Discover to Build workflow, Workspaces (where they are a member), Insights, and Costs. Read-only access to Billing.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>New users created via the member invitation API are always assigned the <strong>ORG Member</strong> role. There is no way for a user to self-assign the ORG Admin role.</p>
+
+      <h3>Adding a New User to the Organisation</h3>
+      <p>There is currently no self-serve invite UI on the platform. New organisation users are created via the platform's member API (<code>POST /api/admin/members</code>). When a new user is created:</p>
+      <ul>
+        <li>They are added to the organisation with the <strong>ORG Member</strong> role</li>
+        <li>A welcome email is sent to the provided email address with login instructions</li>
+        <li>The event is recorded in the Audit Log as <code>member.invited</code></li>
+      </ul>
+      <p>To create a new org user, contact your platform operator or use the API directly with an ORG Admin session token.</p>
+      <p>Once an org user account exists, they can be added to any workspace by an ORG Admin or Workspace Admin.</p>
+
+      <h3>Searching Organisation Members</h3>
+      <p>ORG Admins can search across all organisation members. The global site search (<code>Cmd+K</code> / <code>Ctrl+K</code>) includes a live member search that queries the organisation's user list. This is useful when adding users to workspaces, as the workspace member picker uses the same member list.</p>
+
+      <hr>
+
+      <h2>Workspace Membership</h2>
+      <p>Workspace membership controls who can see and work within a specific workspace. Users must be <strong>existing organisation members</strong> to be added to a workspace. Workspace membership does not create new platform accounts.</p>
+
+      <h3>Workspace Roles</h3>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>View workspace</th>
+              <th>Assign products/projects</th>
+              <th>Manage members</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Workspace Viewer</strong></td>
+              <td>Yes</td>
+              <td>No</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td><strong>Workspace Collaborator</strong></td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td><strong>Workspace Admin</strong></td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>ORG Admins</strong> have implicit Workspace Admin access to every workspace in the organisation without needing an explicit membership row.</p>
+
+      <h3>Adding a Member to a Workspace</h3>
+      <ol>
+        <li>Navigate to <strong>Workspaces</strong> and open the workspace you want to manage.</li>
+        <li>Go to the <strong>Members</strong> tab.</li>
+        <li>Click <strong>Add Member</strong>.</li>
+        <li>Search for an existing organisation user by name or email.</li>
+        <li>Select the user and assign their workspace role (Viewer, Collaborator, or Admin).</li>
+        <li>Confirm. The user now sees this workspace in their Workspaces list.</li>
+      </ol>
+      <p>Only ORG Admins and existing Workspace Admins of a given workspace can add members to it.</p>
+
+      <h3>Changing a Member's Workspace Role</h3>
+      <ol>
+        <li>Open the workspace detail page and go to the <strong>Members</strong> tab.</li>
+        <li>Find the member whose role you want to change.</li>
+        <li>Use the role selector on their row to change their role.</li>
+        <li>The change takes effect immediately.</li>
+      </ol>
+
+      <h3>Removing a Member from a Workspace</h3>
+      <ol>
+        <li>Open the workspace detail page and go to the <strong>Members</strong> tab.</li>
+        <li>Find the member you want to remove.</li>
+        <li>Use the remove action on their row.</li>
+        <li>Confirm. The user will no longer see this workspace in their list and will lose access to its contents.</li>
+      </ol>
+      <p>Removing a user from a workspace does not delete their organisation account or affect their access to other workspaces.</p>
+
+      <hr>
+
+      <h2>How to use it to solve your problem</h2>
+
+      <h3>Onboarding a new team member</h3>
+      <ol>
+        <li>Have the new user account created via the member API (contact your platform operator).</li>
+        <li>Once their account is active, navigate to the relevant workspace(s) in <strong>Workspaces</strong>.</li>
+        <li>Go to the <strong>Members</strong> tab of each workspace they should access.</li>
+        <li>Click <strong>Add Member</strong>, find the user, assign the appropriate workspace role, and confirm.</li>
+        <li>The new member can now log in and will see the workspaces they have been added to.</li>
+      </ol>
+
+      <h3>Granting a stakeholder read-only access</h3>
+      <ol>
+        <li>Have the stakeholder's account created as an ORG Member (via the member API).</li>
+        <li>Add them to the relevant workspace(s) as a <strong>Workspace Viewer</strong>.</li>
+        <li>They can log in and see the products, projects, and members in those workspaces but cannot make any changes.</li>
+      </ol>
+
+      <h3>Restricting a contractor to a specific workspace</h3>
+      <ol>
+        <li>Ensure the contractor has an ORG Member account.</li>
+        <li>Add them only to the workspace(s) relevant to their work, with the appropriate role.</li>
+        <li>As an ORG Member, they will only see workspaces they have been explicitly added to. They will not see other teams' or clients' workspaces.</li>
+      </ol>
+
+      <hr>
+
+      <h2>How it fits the broader picture</h2>
+      <p>Membership management is the access control layer that sits on top of workspaces. The platform's data isolation model works as follows:</p>
+      <ul>
+        <li>All data is scoped to the <strong>organisation</strong>. No data is shared between organisations.</li>
+        <li>Within an organisation, <strong>workspace membership</strong> controls which users can see which products and projects.</li>
+        <li><strong>Platform roles</strong> (ORG Admin vs ORG Member) control access to administrative features.</li>
+      </ul>
+      <p>Setting up membership correctly ensures that each team or client sees only the work relevant to them while ORG Admins retain full visibility and control.</p>
+      <p>For workspace configuration, see <a href="/documentation/v1.0.0.0/workspaces.html">Workspaces</a>. For a full role access matrix, see <a href="/documentation/v1.0.0.0/admin/index.html">Admin Overview</a>.</p>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="footer-logo"><span>VX</span> VixenWorks</a>
+        <p class="footer-copy">&copy; 2025 VixenWorks. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/features.html">Features</a>
+          <a href="/platform.html">Platform</a>
+          <a href="/use-cases.html">Use Cases</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="https://platform.vixenworks.com/register">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152060479"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18152060479');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Costs · VixenWorks Documentation</title>
+  <meta name="description" content="Learn how to use the Costs page on VixenWorks. Track LLM spend per provider, project, workspace, and workflow stage with the cost explorer.">
+  <meta name="author" content="VixenWorks">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0d14">
+  <link rel="canonical" href="https://vixenworks.com/documentation/v1.0.0.0/costs.html">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VixenWorks">
+  <meta property="og:title" content="Costs · VixenWorks Documentation">
+  <meta property="og:description" content="Explore and understand your LLM spend across all platform workflows with the VixenWorks cost explorer.">
+  <meta property="og:url" content="https://vixenworks.com/documentation/v1.0.0.0/costs.html">
+  <meta property="og:image" content="https://vixenworks.com/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="documentation.css">
+
+  <!-- Brevo Conversations {literal} -->
+  <script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '69ffb64e75be1520ad0b9065';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>VX</span> VixenWorks</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/features.html">Features</a></li>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/use-cases.html">Use Cases</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="https://platform.vixenworks.com/register" class="nav-cta">Start Building &rarr;</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DOCUMENTATION LAYOUT -->
+  <div class="doc-layout">
+
+    <!-- DOC NAV -->
+    <nav class="doc-nav" aria-label="Documentation navigation">
+      <div class="doc-nav-group">
+        <a href="/documentation/v1.0.0.0/index.html">Introduction</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Getting Started</span>
+        <a href="/documentation/v1.0.0.0/getting-started.html">Getting Started</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Core Workflows</span>
+        <a href="/documentation/v1.0.0.0/discover.html">Discover</a>
+        <a href="/documentation/v1.0.0.0/define.html">Define</a>
+        <a href="/documentation/v1.0.0.0/design.html">Design</a>
+        <a href="/documentation/v1.0.0.0/build.html">Build</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Platform Features</span>
+        <a href="/documentation/v1.0.0.0/workspaces.html">Workspaces</a>
+        <a href="/documentation/v1.0.0.0/insights.html">Insights</a>
+        <a href="/documentation/v1.0.0.0/costs.html" class="active">Costs</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Administration</span>
+        <a href="/documentation/v1.0.0.0/admin/index.html">Overview</a>
+        <a href="/documentation/v1.0.0.0/admin/settings.html">Settings</a>
+        <a href="/documentation/v1.0.0.0/admin/billing.html">Billing</a>
+        <a href="/documentation/v1.0.0.0/admin/audit-log.html">Audit Log</a>
+        <a href="/documentation/v1.0.0.0/admin/members.html">Members</a>
+      </div>
+    </nav>
+
+    <!-- DOC CONTENT -->
+    <main class="doc-content">
+      <nav class="doc-breadcrumb" aria-label="Breadcrumb">
+        <a href="/documentation/v1.0.0.0/index.html">Documentation</a>
+        <span class="doc-breadcrumb-sep">/</span>
+        <span>Costs</span>
+      </nav>
+
+      <h1>Costs</h1>
+      <p class="doc-lead">The Costs page is an LLM spend explorer. Every call made to an AI provider (OpenAI or Anthropic) across the entire platform is recorded with its token counts and cost. The Costs page aggregates that data and gives you filterable visibility into where your LLM budget is being spent.</p>
+
+      <hr>
+
+      <h2>Who can use it</h2>
+      <p>Available to all authenticated users with an active subscription (both ORG Admins and ORG Members).</p>
+      <p>Navigate to <strong>Costs</strong> in the sidebar or go directly to <code>/costs</code>.</p>
+
+      <hr>
+
+      <h2>How it works</h2>
+
+      <h3>How Costs Are Recorded</h3>
+      <p>Every LLM call anywhere in the platform records a cost entry with:</p>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>What it captures</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Provider</strong></td>
+              <td>OpenAI or Anthropic</td>
+            </tr>
+            <tr>
+              <td><strong>Model</strong></td>
+              <td>The specific model used (e.g. <code>gpt-4o</code>, <code>claude-3-5-sonnet</code>)</td>
+            </tr>
+            <tr>
+              <td><strong>Input tokens</strong></td>
+              <td>Number of input/prompt tokens consumed</td>
+            </tr>
+            <tr>
+              <td><strong>Output tokens</strong></td>
+              <td>Number of output/completion tokens consumed</td>
+            </tr>
+            <tr>
+              <td><strong>Cost</strong></td>
+              <td>Calculated cost for the call based on the model's token pricing</td>
+            </tr>
+            <tr>
+              <td><strong>Stage</strong></td>
+              <td>Which part of the platform generated the call (e.g. <code>discover</code>, <code>workflow-layer1</code>, <code>project-layer6</code>, <code>layer8-agent</code>)</td>
+            </tr>
+            <tr>
+              <td><strong>Project Run</strong></td>
+              <td>The Project Run the call was associated with (if applicable)</td>
+            </tr>
+            <tr>
+              <td><strong>Workspace</strong></td>
+              <td>The workspace the call was associated with (if applicable)</td>
+            </tr>
+            <tr>
+              <td><strong>Organisation</strong></td>
+              <td>The organisation the call belongs to</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>This gives you a complete, per-call record of all LLM spend with enough context to trace any cost back to a specific workflow stage, project, or workspace.</p>
+
+      <h3>Cost Explorer</h3>
+      <p>The main Costs page provides an aggregated breakdown of LLM spend with the following filters:</p>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Filter</th>
+              <th>What it does</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Provider</strong></td>
+              <td>Show spend for OpenAI only, Anthropic only, or both</td>
+            </tr>
+            <tr>
+              <td><strong>Project Run</strong></td>
+              <td>Filter spend to a specific Design/Build project</td>
+            </tr>
+            <tr>
+              <td><strong>Workspace</strong></td>
+              <td>Filter spend to a specific workspace</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Use these filters in combination to answer questions like:</p>
+      <ul>
+        <li>"How much did we spend on OpenAI calls for Project X?"</li>
+        <li>"What is the total LLM cost for the Payments workspace this month?"</li>
+        <li>"Which stage is consuming the most tokens on this project?"</li>
+      </ul>
+      <p>Costs are displayed as aggregated totals alongside a breakdown by model and by stage, so you can see both the headline number and where it came from.</p>
+
+      <h3>Dashboard Snapshot</h3>
+      <p>The main <strong>Dashboard</strong> page includes a snapshot of recent LLM spend for the organisation. This gives you a quick cost health check without having to navigate to the full Costs explorer. ORG Admins see this as part of the organisation overview on the Dashboard.</p>
+
+      <hr>
+
+      <h2>How to use it to solve your problem</h2>
+
+      <h3>Identifying which projects are most expensive</h3>
+      <ol>
+        <li>Navigate to <strong>Costs</strong> in the sidebar.</li>
+        <li>Leave all filters at their defaults to see org-wide spend.</li>
+        <li>Review the breakdown by Project Run to identify which projects are consuming the most budget.</li>
+      </ol>
+
+      <h3>Understanding spend by workspace</h3>
+      <ol>
+        <li>Navigate to <strong>Costs</strong>.</li>
+        <li>Use the <strong>Workspace</strong> filter to select a specific workspace.</li>
+        <li>Review the spend breakdown to see total cost for that workspace, split by project and stage.</li>
+      </ol>
+      <p>This is useful for teams that want to report LLM costs per client or per team.</p>
+
+      <h3>Identifying expensive workflow stages</h3>
+      <ol>
+        <li>Navigate to <strong>Costs</strong>.</li>
+        <li>Filter to a specific project using the <strong>Project Run</strong> filter.</li>
+        <li>Review the cost breakdown by stage. This shows you which layers (e.g. Layer 6 verbose task generation, Layer 8 agent execution) are the largest contributors to cost for that project.</li>
+      </ol>
+      <p>Layer 6 (verbose task generation) and Layer 8 (agent execution) are typically the highest-cost stages because they involve large context windows and many sequential calls.</p>
+
+      <h3>Managing budget across projects</h3>
+      <p>If you need to control costs across projects:</p>
+      <ol>
+        <li>Use the <strong>Costs</strong> page to monitor spend per project regularly.</li>
+        <li>If a project's agent costs are high, review the <strong>Insights</strong> page to check whether the high cost correlates with high resume counts (the agent retrying tasks). High retries drive high costs. Improving the task specification in Design will reduce both.</li>
+        <li>Use per-project API key overrides (configured in <strong>Design</strong>) to route specific projects to a different LLM account or model to manage budget allocation.</li>
+      </ol>
+
+      <hr>
+
+      <h2>How it fits the broader picture</h2>
+      <p>Costs works alongside Insights to give you a complete operational picture of your active projects. Insights tells you whether work is progressing and where it is blocked. Costs tells you what that work is spending.</p>
+      <p>The two pages together answer the fundamental operations question: "Are we getting value from what we are spending?"</p>
+      <p>For managing the organisation's API keys and ensuring the right projects use the right keys, see <a href="/documentation/v1.0.0.0/admin/settings.html">Settings</a>.</p>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="footer-logo"><span>VX</span> VixenWorks</a>
+        <p class="footer-copy">&copy; 2025 VixenWorks. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/features.html">Features</a>
+          <a href="/platform.html">Platform</a>
+          <a href="/use-cases.html">Use Cases</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="https://platform.vixenworks.com/register">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+</body>
+</html>

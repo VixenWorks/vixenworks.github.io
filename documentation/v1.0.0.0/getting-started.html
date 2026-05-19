@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152060479"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18152060479');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Getting Started · VixenWorks Documentation</title>
+  <meta name="description" content="Get started with VixenWorks. Learn how to register your organisation, log in, navigate the platform, and run your first product workflow.">
+  <meta name="author" content="VixenWorks">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0d14">
+  <link rel="canonical" href="https://vixenworks.com/documentation/v1.0.0.0/getting-started.html">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VixenWorks">
+  <meta property="og:title" content="Getting Started · VixenWorks Documentation">
+  <meta property="og:description" content="Register your organisation, log in, and run your first product workflow on VixenWorks.">
+  <meta property="og:url" content="https://vixenworks.com/documentation/v1.0.0.0/getting-started.html">
+  <meta property="og:image" content="https://vixenworks.com/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="documentation.css">
+
+  <!-- Brevo Conversations {literal} -->
+  <script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '69ffb64e75be1520ad0b9065';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>VX</span> VixenWorks</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/features.html">Features</a></li>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/use-cases.html">Use Cases</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="https://platform.vixenworks.com/register" class="nav-cta">Start Building &rarr;</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DOCUMENTATION LAYOUT -->
+  <div class="doc-layout">
+
+    <!-- DOC NAV -->
+    <nav class="doc-nav" aria-label="Documentation navigation">
+      <div class="doc-nav-group">
+        <a href="/documentation/v1.0.0.0/index.html">Introduction</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Getting Started</span>
+        <a href="/documentation/v1.0.0.0/getting-started.html" class="active">Getting Started</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Core Workflows</span>
+        <a href="/documentation/v1.0.0.0/discover.html">Discover</a>
+        <a href="/documentation/v1.0.0.0/define.html">Define</a>
+        <a href="/documentation/v1.0.0.0/design.html">Design</a>
+        <a href="/documentation/v1.0.0.0/build.html">Build</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Platform Features</span>
+        <a href="/documentation/v1.0.0.0/workspaces.html">Workspaces</a>
+        <a href="/documentation/v1.0.0.0/insights.html">Insights</a>
+        <a href="/documentation/v1.0.0.0/costs.html">Costs</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Administration</span>
+        <a href="/documentation/v1.0.0.0/admin/index.html">Overview</a>
+        <a href="/documentation/v1.0.0.0/admin/settings.html">Settings</a>
+        <a href="/documentation/v1.0.0.0/admin/billing.html">Billing</a>
+        <a href="/documentation/v1.0.0.0/admin/audit-log.html">Audit Log</a>
+        <a href="/documentation/v1.0.0.0/admin/members.html">Members</a>
+      </div>
+    </nav>
+
+    <!-- DOC CONTENT -->
+    <main class="doc-content">
+      <nav class="doc-breadcrumb" aria-label="Breadcrumb">
+        <a href="/documentation/v1.0.0.0/index.html">Documentation</a>
+        <span class="doc-breadcrumb-sep">/</span>
+        <span>Getting Started</span>
+      </nav>
+
+      <h1>Getting Started</h1>
+      <p class="doc-lead">This guide walks you through registering your organisation, logging in for the first time, and orienting yourself in the platform.</p>
+
+      <hr>
+
+      <h2>Who can use it</h2>
+      <p>Anyone can register a new organisation. The person who completes registration is automatically assigned the <strong>ORG Admin</strong> role for that organisation. All subsequent users are invited as <strong>ORG Members</strong>.</p>
+
+      <hr>
+
+      <h2>Registering Your Organisation</h2>
+      <p>Navigate to <code>/register</code>. The registration wizard has three steps:</p>
+      <ol>
+        <li><strong>Organisation name</strong> &mdash; enter the name of your company or team. This creates the top-level container for all your products, projects, workspaces, and billing.</li>
+        <li><strong>Your account</strong> &mdash; enter your name, email address, and choose a password. This account becomes the first ORG Admin.</li>
+        <li><strong>Billing address</strong> &mdash; enter your billing details (optional at this stage, required before subscribing).</li>
+      </ol>
+      <p>On completion you are signed in and redirected to the <strong>Billing</strong> page to activate your subscription. LLM features across the platform are gated behind an active subscription, so this step is required before using Discover, Define, Design, or Build.</p>
+
+      <hr>
+
+      <h2>Logging In</h2>
+      <p>Navigate to <code>/login</code> and enter your email and password. Authenticated sessions use JSON Web Tokens and persist across browser sessions.</p>
+
+      <h3>Forgotten Password</h3>
+      <p>If you forget your password:</p>
+      <ol>
+        <li>Click <strong>Forgot password</strong> on the login page.</li>
+        <li>Enter your email address. A reset link is sent to that address.</li>
+        <li>Open the link, enter a new password, and submit.</li>
+      </ol>
+
+      <hr>
+
+      <h2>Navigating the Platform</h2>
+
+      <h3>Sidebar</h3>
+      <p>The sidebar on the left is your primary navigation. It is always visible and highlights the current page.</p>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Path</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dashboard</td>
+              <td><code>/dashboard</code></td>
+              <td>Organisation-wide activity summary, recent runs, and spend snapshot.</td>
+            </tr>
+            <tr>
+              <td>Discover</td>
+              <td><code>/</code></td>
+              <td>AI chat for problem framing and product discovery. The starting point for any new product.</td>
+            </tr>
+            <tr>
+              <td>Define</td>
+              <td><code>/workflow</code></td>
+              <td>Structured product definition workflow.</td>
+            </tr>
+            <tr>
+              <td>Design</td>
+              <td><code>/project</code></td>
+              <td>Technical design and planning workflow.</td>
+            </tr>
+            <tr>
+              <td>Build</td>
+              <td><code>/board</code></td>
+              <td>Kanban board and autonomous coding agent management.</td>
+            </tr>
+            <tr>
+              <td>Workspaces</td>
+              <td><code>/workspaces</code></td>
+              <td>Containers for grouping products, projects, and team members.</td>
+            </tr>
+            <tr>
+              <td>Insights</td>
+              <td><code>/insights</code></td>
+              <td>Delivery, agent, and product analytics.</td>
+            </tr>
+            <tr>
+              <td>Costs</td>
+              <td><code>/costs</code></td>
+              <td>LLM spend explorer and budget visibility.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>ORG Admins</strong> also see an <strong>Organisation</strong> section at the bottom of the sidebar:</p>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Path</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Settings</td>
+              <td><code>/settings</code></td>
+              <td>Organisation API keys and worker SSH configuration.</td>
+            </tr>
+            <tr>
+              <td>Billing</td>
+              <td><code>/billing</code></td>
+              <td>Subscription management and invoices.</td>
+            </tr>
+            <tr>
+              <td>Audit Log</td>
+              <td><code>/settings/audit-log</code></td>
+              <td>Record of all platform events for the organisation.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Site Search</h3>
+      <p>Press <code>Cmd+K</code> (macOS) or <code>Ctrl+K</code> (Windows/Linux) from anywhere in the app to open the global search modal.</p>
+      <p>Site search gives you:</p>
+      <ul>
+        <li><strong>Page shortcuts</strong> &mdash; jump directly to any section of the platform (Dashboard, Workspaces, specific Insights tabs, etc.)</li>
+        <li><strong>Live search results</strong> &mdash; as you type, results are returned across:
+          <ul>
+            <li>Chat sessions (Discover conversations)</li>
+            <li>Board runs (Build projects)</li>
+            <li>Products (Define workflow runs)</li>
+            <li>Workspaces</li>
+            <li>Organisation members (ORG Admins only)</li>
+          </ul>
+        </li>
+      </ul>
+      <p>ORG Admins see additional shortcuts for Settings, Audit Log, and workspace creation.</p>
+
+      <h3>Theme</h3>
+      <p>Use the theme toggle in the sidebar or header to switch between <strong>light</strong> and <strong>dark</strong> mode. Your preference is persisted across sessions.</p>
+
+      <hr>
+
+      <h2>Subscription Requirement</h2>
+      <p>All AI-powered features (Discover chat, Define workflow, Design workflow, and Build agent) require an active subscription. If your organisation has no subscription or has overdue invoices, a banner is shown across the app.</p>
+      <ul>
+        <li><strong>No Subscription Banner</strong> &mdash; appears when there is no active subscription. ORG Admins see a direct link to the Billing page to subscribe. ORG Members see a notice to contact their admin.</li>
+        <li><strong>Arrears Banner</strong> &mdash; appears on the Build board when invoices are overdue. ORG Admins see admin-specific instructions; ORG Members see a message to contact their admin.</li>
+      </ul>
+      <p>See <a href="/documentation/v1.0.0.0/admin/billing.html">Billing</a> for instructions on managing your subscription.</p>
+
+      <hr>
+
+      <h2>First Steps After Registration</h2>
+      <p>The recommended flow after registering and subscribing:</p>
+      <ol>
+        <li>Go to <strong>Discover</strong> and start a conversation to frame your first product idea.</li>
+        <li>When you have enough clarity, open <strong>Define</strong> to run the structured product definition workflow.</li>
+        <li>Once the definition is complete, move to <strong>Design</strong> to generate your technical plan and backlog.</li>
+        <li>When the design is ready, open <strong>Build</strong> to approve and execute tasks with the coding agent.</li>
+      </ol>
+      <p>For a detailed walkthrough of each stage, see the workflow guides:</p>
+      <ul>
+        <li><a href="/documentation/v1.0.0.0/discover.html">Discover</a></li>
+        <li><a href="/documentation/v1.0.0.0/define.html">Define</a></li>
+        <li><a href="/documentation/v1.0.0.0/design.html">Design</a></li>
+        <li><a href="/documentation/v1.0.0.0/build.html">Build</a></li>
+      </ul>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="footer-logo"><span>VX</span> VixenWorks</a>
+        <p class="footer-copy">&copy; 2025 VixenWorks. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/features.html">Features</a>
+          <a href="/platform.html">Platform</a>
+          <a href="/use-cases.html">Use Cases</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="https://platform.vixenworks.com/register">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+</body>
+</html>

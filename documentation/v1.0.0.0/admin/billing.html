@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152060479"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18152060479');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Billing · VixenWorks Documentation</title>
+  <meta name="description" content="Manage your VixenWorks subscription, billing details, and invoices. Understand the no-subscription and arrears banners and how to resolve them.">
+  <meta name="author" content="VixenWorks">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0d14">
+  <link rel="canonical" href="https://vixenworks.com/documentation/v1.0.0.0/admin/billing.html">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VixenWorks">
+  <meta property="og:title" content="Billing · VixenWorks Documentation">
+  <meta property="og:description" content="Subscribe, cancel, and manage invoices for your VixenWorks organisation.">
+  <meta property="og:url" content="https://vixenworks.com/documentation/v1.0.0.0/admin/billing.html">
+  <meta property="og:image" content="https://vixenworks.com/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="stylesheet" href="../documentation.css">
+
+  <!-- Brevo Conversations {literal} -->
+  <script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '69ffb64e75be1520ad0b9065';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>VX</span> VixenWorks</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/features.html">Features</a></li>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/use-cases.html">Use Cases</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="https://platform.vixenworks.com/register" class="nav-cta">Start Building &rarr;</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DOCUMENTATION LAYOUT -->
+  <div class="doc-layout">
+
+    <!-- DOC NAV -->
+    <nav class="doc-nav" aria-label="Documentation navigation">
+      <div class="doc-nav-group">
+        <a href="/documentation/v1.0.0.0/index.html">Introduction</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Getting Started</span>
+        <a href="/documentation/v1.0.0.0/getting-started.html">Getting Started</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Core Workflows</span>
+        <a href="/documentation/v1.0.0.0/discover.html">Discover</a>
+        <a href="/documentation/v1.0.0.0/define.html">Define</a>
+        <a href="/documentation/v1.0.0.0/design.html">Design</a>
+        <a href="/documentation/v1.0.0.0/build.html">Build</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Platform Features</span>
+        <a href="/documentation/v1.0.0.0/workspaces.html">Workspaces</a>
+        <a href="/documentation/v1.0.0.0/insights.html">Insights</a>
+        <a href="/documentation/v1.0.0.0/costs.html">Costs</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Administration</span>
+        <a href="/documentation/v1.0.0.0/admin/index.html">Overview</a>
+        <a href="/documentation/v1.0.0.0/admin/settings.html">Settings</a>
+        <a href="/documentation/v1.0.0.0/admin/billing.html" class="active">Billing</a>
+        <a href="/documentation/v1.0.0.0/admin/audit-log.html">Audit Log</a>
+        <a href="/documentation/v1.0.0.0/admin/members.html">Members</a>
+      </div>
+    </nav>
+
+    <!-- DOC CONTENT -->
+    <main class="doc-content">
+      <nav class="doc-breadcrumb" aria-label="Breadcrumb">
+        <a href="/documentation/v1.0.0.0/index.html">Documentation</a>
+        <span class="doc-breadcrumb-sep">/</span>
+        <a href="/documentation/v1.0.0.0/admin/index.html">Administration</a>
+        <span class="doc-breadcrumb-sep">/</span>
+        <span>Billing</span>
+      </nav>
+
+      <h1>Billing</h1>
+      <p class="doc-lead">The Billing page is where ORG Admins manage the organisation's subscription, billing details, and invoices. An active subscription is required to use any LLM-powered feature on the platform.</p>
+
+      <hr>
+
+      <h2>Who can use it</h2>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Capability</th>
+              <th>ORG Member</th>
+              <th>ORG Admin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>View subscription status</td>
+              <td>Yes (read-only)</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>View invoices</td>
+              <td>Yes (read-only)</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>View billing details</td>
+              <td>Yes (read-only)</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Subscribe / resubscribe</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Cancel subscription</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Edit billing details</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Navigate to <strong>Billing</strong> in the Organisation section of the sidebar, or go directly to <code>/billing</code>.</p>
+      <p>ORG Members do not see Billing in the sidebar but can navigate to <code>/billing</code> directly and will see a read-only view.</p>
+
+      <hr>
+
+      <h2>How it works</h2>
+
+      <h3>Subscription Management</h3>
+      <p>The platform uses <strong>Chargebee</strong> to manage subscriptions. All subscription changes (subscribe, cancel, resubscribe) are processed through the Chargebee-hosted checkout flow.</p>
+
+      <p><strong>Subscribing:</strong></p>
+      <ol>
+        <li>Navigate to <strong>Billing</strong>.</li>
+        <li>Click <strong>Subscribe</strong> (or <strong>Manage subscription</strong> if a subscription exists).</li>
+        <li>Complete the Chargebee checkout. Enter payment details as required.</li>
+        <li>On successful payment, your subscription activates and LLM access is granted across the platform.</li>
+      </ol>
+
+      <p><strong>Cancelling:</strong></p>
+      <ol>
+        <li>Navigate to <strong>Billing</strong>.</li>
+        <li>Click <strong>Cancel subscription</strong>.</li>
+        <li>Confirm the cancellation. The subscription is cancelled at the end of the current billing period.</li>
+        <li>LLM features remain accessible until the subscription period ends.</li>
+      </ol>
+
+      <p><strong>Resubscribing:</strong></p>
+      <ol>
+        <li>Navigate to <strong>Billing</strong>.</li>
+        <li>Click <strong>Resubscribe</strong> (shown when the subscription has been cancelled or lapsed).</li>
+        <li>Complete the Chargebee checkout to reinstate the subscription.</li>
+      </ol>
+
+      <h3>Billing Details</h3>
+      <p>Billing details (organisation name, address, and contact) are used for invoice generation. They can be updated at any time.</p>
+      <ol>
+        <li>Navigate to <strong>Billing</strong>.</li>
+        <li>Edit the billing details fields.</li>
+        <li>Click <strong>Save billing details</strong>.</li>
+      </ol>
+
+      <h3>Invoices</h3>
+      <p>All invoices for the organisation are listed on the Billing page. Each invoice shows the billing period, total amount, and status (paid, outstanding, overdue).</p>
+      <p>Click any invoice to view its detail, including a line-item breakdown of LLM usage charges.</p>
+
+      <hr>
+
+      <h2>Billing Status Banners</h2>
+      <p>The platform displays inline banners when the billing status requires attention. These banners appear across the app (not just on the Billing page) to ensure important billing issues are visible.</p>
+
+      <h3>No Subscription Banner</h3>
+      <p>Shown when the organisation has no active subscription.</p>
+      <ul>
+        <li><strong>ORG Admin:</strong> sees a direct link to the Billing page to subscribe.</li>
+        <li><strong>ORG Member:</strong> sees a notice to contact their organisation admin.</li>
+      </ul>
+      <p>When this banner is showing, all LLM-powered features are blocked (Discover chat, Define workflow, Design workflow, Build agent).</p>
+      <p><strong>Resolution:</strong> ORG Admin should navigate to Billing and subscribe.</p>
+
+      <h3>Arrears Banner</h3>
+      <p>Shown on the Build board when the organisation has outstanding overdue invoices.</p>
+      <ul>
+        <li><strong>ORG Admin:</strong> sees admin-specific instructions (typically to update payment details or settle the overdue invoice).</li>
+        <li><strong>ORG Member:</strong> sees a message to contact their organisation admin.</li>
+      </ul>
+      <p>When this banner is showing, product features (Define, Design) remain accessible but LLM features are blocked.</p>
+      <p><strong>Resolution:</strong> ORG Admin should navigate to Billing, open the overdue invoice, and process the payment.</p>
+
+      <hr>
+
+      <h2>How to use it to solve your problem</h2>
+
+      <h3>Getting started after registration</h3>
+      <p>After completing the registration wizard you are redirected to the Billing page automatically. Complete the subscription checkout before attempting to use any AI features.</p>
+
+      <h3>Resolving a blocked platform</h3>
+      <p>If the platform has stopped responding to AI requests and a subscription or arrears banner is visible:</p>
+      <ol>
+        <li>Navigate to <strong>Billing</strong> (ORG Admins only can resolve this).</li>
+        <li>If the <strong>No Subscription Banner</strong> is shown: click Subscribe and complete the checkout.</li>
+        <li>If the <strong>Arrears Banner</strong> is shown: find the overdue invoice in the invoice list and process payment.</li>
+        <li>Once the billing issue is resolved, the platform will restore LLM access within a few minutes.</li>
+      </ol>
+
+      <h3>Updating your billing address for new invoices</h3>
+      <ol>
+        <li>Navigate to <strong>Billing</strong>.</li>
+        <li>Update the billing details fields with the new address.</li>
+        <li>Click <strong>Save billing details</strong>. Future invoices will reflect the updated details.</li>
+      </ol>
+
+      <hr>
+
+      <h2>How it fits the broader picture</h2>
+      <p>Billing is the access gate for the entire platform. Every LLM-powered feature (Discover, Define, Design, and Build) requires an active subscription. Keeping billing in order is an operational prerequisite for using the platform.</p>
+      <p>For audit trail records of billing events (subscription changes, payment events), see <a href="/documentation/v1.0.0.0/admin/audit-log.html">Audit Log</a>.</p>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="footer-logo"><span>VX</span> VixenWorks</a>
+        <p class="footer-copy">&copy; 2025 VixenWorks. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/features.html">Features</a>
+          <a href="/platform.html">Platform</a>
+          <a href="/use-cases.html">Use Cases</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="https://platform.vixenworks.com/register">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+</body>
+</html>

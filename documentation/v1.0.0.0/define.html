@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152060479"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18152060479');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Define · VixenWorks Documentation</title>
+  <meta name="description" content="Learn how to use the Define stage on VixenWorks. Layer 1 discovery, Layer 2 problem statement synthesis, adversarial review, and Planner Chat.">
+  <meta name="author" content="VixenWorks">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0d14">
+  <link rel="canonical" href="https://vixenworks.com/documentation/v1.0.0.0/define.html">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VixenWorks">
+  <meta property="og:title" content="Define · VixenWorks Documentation">
+  <meta property="og:description" content="Turn raw product ideas into a precise, unambiguous product definition using the Define workflow.">
+  <meta property="og:url" content="https://vixenworks.com/documentation/v1.0.0.0/define.html">
+  <meta property="og:image" content="https://vixenworks.com/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="documentation.css">
+
+  <!-- Brevo Conversations {literal} -->
+  <script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '69ffb64e75be1520ad0b9065';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>VX</span> VixenWorks</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/features.html">Features</a></li>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/use-cases.html">Use Cases</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="https://platform.vixenworks.com/register" class="nav-cta">Start Building &rarr;</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DOCUMENTATION LAYOUT -->
+  <div class="doc-layout">
+
+    <!-- DOC NAV -->
+    <nav class="doc-nav" aria-label="Documentation navigation">
+      <div class="doc-nav-group">
+        <a href="/documentation/v1.0.0.0/index.html">Introduction</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Getting Started</span>
+        <a href="/documentation/v1.0.0.0/getting-started.html">Getting Started</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Core Workflows</span>
+        <a href="/documentation/v1.0.0.0/discover.html">Discover</a>
+        <a href="/documentation/v1.0.0.0/define.html" class="active">Define</a>
+        <a href="/documentation/v1.0.0.0/design.html">Design</a>
+        <a href="/documentation/v1.0.0.0/build.html">Build</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Platform Features</span>
+        <a href="/documentation/v1.0.0.0/workspaces.html">Workspaces</a>
+        <a href="/documentation/v1.0.0.0/insights.html">Insights</a>
+        <a href="/documentation/v1.0.0.0/costs.html">Costs</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Administration</span>
+        <a href="/documentation/v1.0.0.0/admin/index.html">Overview</a>
+        <a href="/documentation/v1.0.0.0/admin/settings.html">Settings</a>
+        <a href="/documentation/v1.0.0.0/admin/billing.html">Billing</a>
+        <a href="/documentation/v1.0.0.0/admin/audit-log.html">Audit Log</a>
+        <a href="/documentation/v1.0.0.0/admin/members.html">Members</a>
+      </div>
+    </nav>
+
+    <!-- DOC CONTENT -->
+    <main class="doc-content">
+      <nav class="doc-breadcrumb" aria-label="Breadcrumb">
+        <a href="/documentation/v1.0.0.0/index.html">Documentation</a>
+        <span class="doc-breadcrumb-sep">/</span>
+        <span>Define</span>
+      </nav>
+
+      <h1>Define</h1>
+      <p class="doc-lead">Define is the second stage of the platform workflow. Its purpose is to take the raw ideas and context from Discover and produce a thorough, unambiguous product definition. If Discover is where you think out loud, Define is where you commit.</p>
+
+      <hr>
+
+      <h2>What it is</h2>
+      <p>Every assumption is surfaced, every requirement is captured, and the output becomes the formal contract that all subsequent work is measured against. The Define workflow runs in two structured layers, each producing a formal artefact stored against the Workflow Run.</p>
+
+      <hr>
+
+      <h2>Who can use it</h2>
+      <p>Available to all authenticated users with an active subscription (both ORG Admins and ORG Members).</p>
+      <p>Navigate to <strong>Define</strong> in the sidebar or go directly to <code>/workflow</code>.</p>
+
+      <hr>
+
+      <h2>How it works</h2>
+
+      <h3>Workflow Runs</h3>
+      <p>Every product definition is stored as a <strong>Workflow Run</strong>. A Workflow Run is the container for all artefacts produced in the Define stage. You can have multiple Workflow Runs, one per product or initiative.</p>
+      <p>From the Define page you can:</p>
+      <ul>
+        <li>Create a new Workflow Run</li>
+        <li>View and navigate all existing runs</li>
+        <li>Resume a run that is in progress</li>
+      </ul>
+      <p>Each run progresses through a defined status lifecycle: <code>INTAKE</code> &rarr; <code>DISCOVERY</code> &rarr; <code>NEEDS_REVIEW</code> &rarr; <code>SYNTHESIS</code> &rarr; <code>COMPLETE</code>.</p>
+
+      <h3>Layer 1: Discovery</h3>
+      <p>Layer 1 performs a structured, multi-pass discovery process against your uploaded documents and the conversation history from your Discover session.</p>
+      <p>What it does:</p>
+      <ul>
+        <li>Runs multiple discovery passes to extract customer needs, pain points, constraints, and assumptions</li>
+        <li>Produces a formal <strong>discovery artefact</strong> stored on the Workflow Run</li>
+        <li>Tracks explicit status stages so you always know where the run is in the process</li>
+      </ul>
+      <p>The discovery artefact captures what the AI has understood about the product from all available context. You should review this output carefully. It is the foundation of everything that follows.</p>
+
+      <h3>Layer 2: Problem Statement Synthesis</h3>
+      <p>Layer 2 takes the Layer 1 discovery artefact and synthesises it into a concise, structured <strong>problem statement</strong>.</p>
+      <p>The problem statement:</p>
+      <ul>
+        <li>Defines the specific problem being solved</li>
+        <li>Identifies who experiences the problem</li>
+        <li>Articulates the current state and desired future state</li>
+        <li>Captures scope boundaries</li>
+      </ul>
+      <p>Once Layer 2 completes, the Workflow Run status advances to <code>COMPLETE</code> and the definition is ready to be used as the input for the Design stage.</p>
+
+      <h3>Adversarial Review</h3>
+      <p>Any artefact produced in Define (discovery output, problem statement) can be submitted to an <strong>adversarial review</strong>. This is an independent AI critique that stress-tests the artefact by challenging its assumptions, identifying gaps, and flagging potential issues.</p>
+      <p>How to use it:</p>
+      <ol>
+        <li>Open the artefact you want to review.</li>
+        <li>Select <strong>Adversarial Review</strong> (this opens at <code>/adversarial</code>).</li>
+        <li>The critique streams token by token, contextualised to the type of artefact being reviewed.</li>
+        <li>Use the critique output to identify what needs to be amended before moving forward.</li>
+      </ol>
+      <p>Adversarial review is not a blocker. It is an optional quality gate. Use it whenever you want a second opinion from a critical perspective before committing to the next stage.</p>
+
+      <h3>Planner Chat (Artefact Amendment)</h3>
+      <p>The <strong>Planner Chat</strong> panel is a side-panel LLM interface available throughout Define (and Design and Build). It is specifically designed for amending the artefacts on your Workflow Run.</p>
+      <p>Unlike the general Discover chat, Planner Chat is aware of the current run and its artefacts. You can use it to:</p>
+      <ul>
+        <li>Ask questions about the current artefact: "What assumptions are we making in the problem statement?"</li>
+        <li>Request targeted amendments: "Update the problem statement to reflect that the primary user is a warehouse manager, not a logistics coordinator."</li>
+        <li>Drill deeper into a specific area: "Expand the customer needs section to include accessibility requirements."</li>
+      </ul>
+      <p>The AI applies your requested changes as diffs to the stored artefact. Planner chat messages are saved separately from general chat sessions. All changes are persisted to the Workflow Run.</p>
+
+      <hr>
+
+      <h2>How to use it to solve your problem</h2>
+
+      <h3>Running a complete Define workflow</h3>
+      <ol>
+        <li>Navigate to <strong>Define</strong> in the sidebar.</li>
+        <li>Click <strong>New Run</strong> to create a new Workflow Run. Give it a name that reflects the product or initiative.</li>
+        <li>If you have discovery context from the Discover stage, it will be associated automatically via the linked Workflow Run.</li>
+        <li>Trigger <strong>Layer 1</strong> to run the discovery process. Wait for the status to advance to <code>NEEDS_REVIEW</code>.</li>
+        <li>Review the discovery artefact. Check that it accurately reflects what you know about the problem.</li>
+        <li>If anything is missing or incorrect, open the <strong>Planner Chat</strong> panel and describe the amendment needed.</li>
+        <li>Once you are satisfied with the discovery artefact, trigger <strong>Layer 2</strong> to synthesise the problem statement.</li>
+        <li>Review the problem statement. Run an <strong>Adversarial Review</strong> to challenge it if you want a quality check.</li>
+        <li>Amend via Planner Chat as needed until the problem statement accurately reflects the product you intend to build.</li>
+        <li>When the run reaches <code>COMPLETE</code>, the definition is ready for Design.</li>
+      </ol>
+
+      <h3>Amending a completed run</h3>
+      <p>Workflow Runs can be reopened and amended at any time. If requirements change after you have moved to Design or Build, come back to Define, update the relevant artefacts via Planner Chat, and the changes will be available to inform re-runs of the Design workflow.</p>
+
+      <hr>
+
+      <h2>How it fits the broader picture</h2>
+      <p>Define sits between Discover and Design. Its output, the completed Workflow Run artefacts, becomes the <strong>source of truth</strong> that the Design workflow is validated against. The Design stage will not produce artefacts that contradict or drift from the product definition, because the definition is explicitly injected into every Design prompt.</p>
+      <p>This is the critical handoff. A thorough, accurate Define output means the Design stage will produce a solution that actually solves the right problem. Gaps or vagueness in Define will propagate forward.</p>
+      <p>When your problem statement is complete and reviewed, move to <a href="/documentation/v1.0.0.0/design.html">Design</a>.</p>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="footer-logo"><span>VX</span> VixenWorks</a>
+        <p class="footer-copy">&copy; 2025 VixenWorks. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/features.html">Features</a>
+          <a href="/platform.html">Platform</a>
+          <a href="/use-cases.html">Use Cases</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="https://platform.vixenworks.com/register">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+</body>
+</html>

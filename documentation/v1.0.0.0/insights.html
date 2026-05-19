@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152060479"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18152060479');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Insights · VixenWorks Documentation</title>
+  <meta name="description" content="Learn how to use Insights on VixenWorks. Delivery analytics, agent performance metrics, product complexity scores, and AI-generated recommendations.">
+  <meta name="author" content="VixenWorks">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0d14">
+  <link rel="canonical" href="https://vixenworks.com/documentation/v1.0.0.0/insights.html">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VixenWorks">
+  <meta property="og:title" content="Insights · VixenWorks Documentation">
+  <meta property="og:description" content="Track delivery health, agent performance, and product complexity with real-time analytics and AI recommendations.">
+  <meta property="og:url" content="https://vixenworks.com/documentation/v1.0.0.0/insights.html">
+  <meta property="og:image" content="https://vixenworks.com/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="documentation.css">
+
+  <!-- Brevo Conversations {literal} -->
+  <script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '69ffb64e75be1520ad0b9065';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+  </script>
+  <!-- /Brevo Conversations {/literal} -->
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo"><span>VX</span> VixenWorks</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/features.html">Features</a></li>
+        <li><a href="/platform.html">Platform</a></li>
+        <li><a href="/use-cases.html">Use Cases</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <a href="https://platform.vixenworks.com/register" class="nav-cta">Start Building &rarr;</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DOCUMENTATION LAYOUT -->
+  <div class="doc-layout">
+
+    <!-- DOC NAV -->
+    <nav class="doc-nav" aria-label="Documentation navigation">
+      <div class="doc-nav-group">
+        <a href="/documentation/v1.0.0.0/index.html">Introduction</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Getting Started</span>
+        <a href="/documentation/v1.0.0.0/getting-started.html">Getting Started</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Core Workflows</span>
+        <a href="/documentation/v1.0.0.0/discover.html">Discover</a>
+        <a href="/documentation/v1.0.0.0/define.html">Define</a>
+        <a href="/documentation/v1.0.0.0/design.html">Design</a>
+        <a href="/documentation/v1.0.0.0/build.html">Build</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Platform Features</span>
+        <a href="/documentation/v1.0.0.0/workspaces.html">Workspaces</a>
+        <a href="/documentation/v1.0.0.0/insights.html" class="active">Insights</a>
+        <a href="/documentation/v1.0.0.0/costs.html">Costs</a>
+      </div>
+      <div class="doc-nav-group">
+        <span class="doc-nav-group-title">Administration</span>
+        <a href="/documentation/v1.0.0.0/admin/index.html">Overview</a>
+        <a href="/documentation/v1.0.0.0/admin/settings.html">Settings</a>
+        <a href="/documentation/v1.0.0.0/admin/billing.html">Billing</a>
+        <a href="/documentation/v1.0.0.0/admin/audit-log.html">Audit Log</a>
+        <a href="/documentation/v1.0.0.0/admin/members.html">Members</a>
+      </div>
+    </nav>
+
+    <!-- DOC CONTENT -->
+    <main class="doc-content">
+      <nav class="doc-breadcrumb" aria-label="Breadcrumb">
+        <a href="/documentation/v1.0.0.0/index.html">Documentation</a>
+        <span class="doc-breadcrumb-sep">/</span>
+        <span>Insights</span>
+      </nav>
+
+      <h1>Insights</h1>
+      <p class="doc-lead">Insights is the analytics centre of the platform. It gives you visibility into how your products are progressing through delivery, how the coding agent is performing, and what the complexity and risk profile of your backlog looks like.</p>
+
+      <hr>
+
+      <h2>What it is</h2>
+      <p>Insights also surfaces AI-generated recommendations to help you identify and address delivery issues before they become blockers.</p>
+
+      <hr>
+
+      <h2>Who can use it</h2>
+      <p>Available to all authenticated users with an active subscription (both ORG Admins and ORG Members).</p>
+      <p>Navigate to <strong>Insights</strong> in the sidebar or go directly to <code>/insights</code>.</p>
+
+      <hr>
+
+      <h2>How it works</h2>
+      <p>Insights is organised into four tabs, each covering a different analytical dimension.</p>
+
+      <h3>Delivery Analytics</h3>
+      <p>The Delivery tab shows the health and progress of your active and completed build projects across all Project Runs.</p>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>What it tells you</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Epic progress</strong></td>
+              <td>Completion percentage per epic across all project runs. Identifies which areas of the product are on track and which are lagging.</td>
+            </tr>
+            <tr>
+              <td><strong>Blocked tasks</strong></td>
+              <td>Tasks that are unable to proceed due to failed dependencies or agent failures. Blocked tasks are surfaced immediately so they can be actioned.</td>
+            </tr>
+            <tr>
+              <td><strong>Throughput</strong></td>
+              <td>The rate at which tasks are being completed over time. Useful for estimating remaining delivery time.</td>
+            </tr>
+            <tr>
+              <td><strong>Delivery forecast</strong></td>
+              <td>A projected completion timeline based on current throughput and remaining task count.</td>
+            </tr>
+            <tr>
+              <td><strong>Health signals</strong></td>
+              <td>Early warning indicators derived from blocked task rates, failure rates, and throughput trends.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Use the delivery tab when you want to answer: "Is this project on track? Where is it stuck?"</p>
+
+      <h3>Agent Analytics</h3>
+      <p>The Agent tab provides visibility into the performance of the coding agent across all your build projects.</p>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>What it tells you</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Task success rate</strong></td>
+              <td>The percentage of tasks the agent completed successfully on the first attempt.</td>
+            </tr>
+            <tr>
+              <td><strong>Task failure rate</strong></td>
+              <td>The percentage of tasks that required intervention (manual restart or specification amendment).</td>
+            </tr>
+            <tr>
+              <td><strong>Resume counts</strong></td>
+              <td>How many times tasks had to be restarted after stalling or failing. High resume counts on specific task types indicate a pattern worth investigating.</td>
+            </tr>
+            <tr>
+              <td><strong>Test pass signals</strong></td>
+              <td>Aggregated signals from tasks that include test execution, indicating whether the agent's output is meeting quality criteria.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Use the agent tab when you want to answer: "How reliably is the agent completing tasks? Are there patterns in what it struggles with?"</p>
+
+      <h3>Product Analytics</h3>
+      <p>The Product tab provides analytical views derived from the Design artefacts (verbose tasks and architecture).</p>
+
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>What it tells you</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Complexity scores</strong></td>
+              <td>Per-story complexity scoring derived from the verbose task descriptions and architectural dependencies. High complexity scores indicate stories that may need to be broken down further before being sent to Build.</td>
+            </tr>
+            <tr>
+              <td><strong>Risk themes</strong></td>
+              <td>Common risk themes extracted across the backlog. For example: "Many tasks depend on an external API that has not been confirmed," or "Multiple tasks modify the same database schema."</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Use the product tab when you want to answer: "Are there stories that are too complex for the agent? What are the systemic risks across the backlog?"</p>
+
+      <h3>AI Recommendations</h3>
+      <p>The Recommendations tab surfaces LLM-generated insights about your delivery, agent performance, and product backlog.</p>
+      <p>Recommendations are generated from the platform's own data. They are not generic advice but specific observations based on your project's task outcomes, failure patterns, and complexity signals.</p>
+      <p>Examples of recommendations:</p>
+      <ul>
+        <li>"5 tasks in the user authentication epic have failed twice. Consider reviewing the specification for that epic before the next approval."</li>
+        <li>"Throughput has dropped 40% over the last 3 days. The blocked task in batch 4 is the likely cause."</li>
+        <li>"3 stories in the reporting epic have complexity scores above the threshold. Consider splitting them before enqueuing."</li>
+      </ul>
+      <p>Recommendations are cached on the Project Run. They are not regenerated automatically. To get fresh recommendations based on the latest project state:</p>
+      <ol>
+        <li>Go to the <strong>Recommendations</strong> tab.</li>
+        <li>Click <strong>Regenerate</strong> to trigger a new LLM analysis of the current project data.</li>
+      </ol>
+
+      <hr>
+
+      <h2>How to use it to solve your problem</h2>
+
+      <h3>Identifying why a build project is stalled</h3>
+      <ol>
+        <li>Open the <strong>Delivery</strong> tab.</li>
+        <li>Look at the <strong>Blocked tasks</strong> list. Identify which tasks are blocked and in which batch.</li>
+        <li>Click through to the blocked task on the Build board to see the agent's execution log.</li>
+        <li>Determine whether the block is a transient failure (restart the task) or a specification issue (amend in Design and restart).</li>
+      </ol>
+
+      <h3>Understanding where the agent struggles</h3>
+      <ol>
+        <li>Open the <strong>Agent</strong> tab.</li>
+        <li>Look at the <strong>Resume counts</strong> breakdown. Tasks with high resume counts are consistently difficult for the agent.</li>
+        <li>Cross-reference with the <strong>Product</strong> tab's complexity scores. High-complexity tasks often correlate with high resume counts.</li>
+        <li>Return to <strong>Design</strong> and use Planner Chat to break down or clarify the problematic tasks before re-enqueuing them.</li>
+      </ol>
+
+      <h3>Getting a health overview before approving the next batch</h3>
+      <ol>
+        <li>Open the <strong>Delivery</strong> tab and check the health signals before approving the next batch.</li>
+        <li>If the current batch has a high failure rate, investigate before proceeding.</li>
+        <li>Check the <strong>Recommendations</strong> tab and regenerate if the recommendations are stale.</li>
+      </ol>
+
+      <hr>
+
+      <h2>How it fits the broader picture</h2>
+      <p>Insights closes the feedback loop on the Build stage. Rather than waiting until a project is complete to understand what went wrong, Insights surfaces issues in real time and helps you make informed decisions at each batch approval.</p>
+      <p>The metrics in Insights are most valuable when used in combination:</p>
+      <ul>
+        <li>Delivery signals tell you whether the project is on track</li>
+        <li>Agent signals tell you whether the specification quality is sufficient</li>
+        <li>Product signals tell you where to focus remediation effort</li>
+      </ul>
+      <p>For cost visibility alongside delivery performance, see <a href="/documentation/v1.0.0.0/costs.html">Costs</a>.</p>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="footer-logo"><span>VX</span> VixenWorks</a>
+        <p class="footer-copy">&copy; 2025 VixenWorks. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/features.html">Features</a>
+          <a href="/platform.html">Platform</a>
+          <a href="/use-cases.html">Use Cases</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="https://platform.vixenworks.com/register">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
+</body>
+</html>
